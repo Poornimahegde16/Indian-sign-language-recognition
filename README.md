@@ -1,30 +1,12 @@
-# Image Classification Using Convolutional Neural Networks (CNN)
+### Project Summary: Image Classification Model with Gradio Interface
 
-This project implements a Convolutional Neural Network (CNN) using TensorFlow and Keras for image classification. The model is trained on a dataset of images stored in Google Drive and is capable of predicting the class of a given image. The project also includes a web interface using Gradio for easy interaction with the model.
+This project focuses on building and deploying a Convolutional Neural Network (CNN) for multi-class image classification. The model is trained on a dataset of images stored in Google Drive, where it learns to categorize images into 36 distinct classes. The project leverages TensorFlow and Keras libraries for model building, training, and evaluation, with data preprocessing handled by the `ImageDataGenerator` class. The model includes three convolutional layers, each followed by batch normalization, max pooling, and dropout to enhance performance and prevent overfitting.
 
-## Table of Contents
-- [Installation](#installation)
-- [Dataset](#dataset)
-- [Model Architecture](#model-architecture)
-- [Training](#training)
-- [Evaluation](#evaluation)
-- [Prediction](#prediction)
-- [Web Interface](#web-interface)
-- [Usage](#usage)
-- [License](#license)
+After training, the model's performance is evaluated on a test dataset. The final trained model is saved to Google Drive for future use. Additionally, a Gradio interface is implemented to allow users to upload images and receive real-time predictions based on the trained model. This project is suitable for use cases requiring quick and accurate image classification, such as in medical imaging, automated quality control, or other areas requiring image-based predictions.
 
-## Installation
-
-To run this project, you need to have Python installed along with the following libraries:
-
-- TensorFlow
-- Keras
-- NumPy
-- Matplotlib
-- Gradio
-- PIL (Python Imaging Library)
-
-You can install the required libraries using pip:
-
-```bash
-pip install tensorflow keras numpy matplotlib gradio pillow
+### Key Features:
+- **CNN Architecture**: Three convolutional layers with batch normalization and dropout for improved accuracy and reduced overfitting.
+- **Data Preprocessing**: Automated rescaling and batching of images using TensorFlow’s `ImageDataGenerator`.
+- **Model Training**: Includes model checkpoints for saving progress and avoiding data loss.
+- **Real-Time Prediction**: A Gradio-powered web interface for interactive image classification.
+- **Deployment-Ready**: The final model is saved in HDF5 format, enabling easy deployment and further fine-tuning.
